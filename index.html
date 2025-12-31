@@ -1,17 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Feroz Ghaffar | Game Developer</title>
+    <meta charset="UTF-8">
+    <title>Feroz Ghaffar | Unity Game Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f0f0f;
+            color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #000000);
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-weight: normal;
+            color: #00ffcc;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h3 {
+            border-left: 4px solid #00ffcc;
+            padding-left: 12px;
+            margin-bottom: 30px;
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .game-card {
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .game-card h4 {
+            margin: 15px 0 10px;
+        }
+
+        .game-card a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #1c1c1c;
+            padding: 10px 15px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #000;
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial; text-align:center;">
+
+<body>
+
+<header>
     <h1>Feroz Ghaffar</h1>
     <h2>Unity Game Developer</h2>
     <p>Android | iOS | Amazon</p>
+</header>
 
+<section>
     <h3>My Games</h3>
-    <p>Portfolio coming soon...</p>
 
+    <div class="games">
+
+        <div class="game-card">
+            <img src="https://via.placeholder.com/400x220" alt="Game">
+            <h4>Game Title 1</h4>
+            <p>Hyper Casual / Action Game made in Unity.</p>
+            <a href="#">Google Play</a> |
+            <a href="#">App Store</a> |
+            <a href="#">Amazon</a>
+        </div>
+
+        <div class="game-card">
+            <img src="https://via.placeholder.com/400x220" alt="Game">
+            <h4>Game Title 2</h4>
+            <p>Arcade / Endless Runner.</p>
+            <a href="#">Google Play</a> |
+            <a href="#">App Store</a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h3>Skills</h3>
+    <div class="skills">
+        <span>Unity (C#)</span>
+        <span>Android & iOS Builds</span>
+        <span>Game Optimization</span>
+        <span>AdMob & AppLovin</span>
+        <span>In-App Purchases</span>
+        <span>Firebase Analytics</span>
+    </div>
+</section>
+
+<section>
     <h3>Contact</h3>
     <p>Email: your@email.com</p>
+    <p>GitHub: github.com/Ferozghaffar</p>
+</section>
+
+<footer>
+    © 2025 Feroz Ghaffar | Game Developer
+</footer>
+
 </body>
 </html>
