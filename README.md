@@ -1,2 +1,1 @@
-# ferozghaffar.github.io
-My Portfolio
+<!-- This file is intentionally left blank -->
