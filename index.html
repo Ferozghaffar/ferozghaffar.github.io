@@ -166,22 +166,26 @@ background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
   <section class="section">
    <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🤖 Android Games (From Scratch)</h2>
     <div class="games-grid" id="android-scratch"></div>
+
+  <section class="section">
+   <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🛒 Amazon Store Games</h2>
+    <div class="games-grid" id="amazon-store"></div>
+    
   </section>
   <section class="section">
   <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🛒 Galaxy Store Games</h2>
   <div class="games-grid" id="galaxy-store"></div>
+    
 </section>
   <section class="section">
     <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🛠️ Working / Updates on iOS Games</h2>
     <div class="games-grid" id="ios-updates"></div>
   </section>
 
-
   <section class="section">
    <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🧹 Working / Updates on Android Games</h2>
     <div class="games-grid" id="android-updates"></div>
   </section>
-
 
  <script>
  async function fetchIconAndName(url, isIOS, gameObj) {
@@ -238,6 +242,8 @@ let badgeImg = '';
 if (isIOS) {
   // iOS App Store badge
   badgeImg = 'https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg';
+} else if (game.url && game.url.includes('amazon.com')) {
+  badgeImg = 'https://images-na.ssl-images-amazon.com/images/G/01/appstore/badge_download_on_amazon_en_US.png';
 } else if (game.url && game.url.includes('galaxystore.samsung.com')) {
   // Samsung / Galaxy Store: use custom text + icon (handled below)
   badgeImg = '';
@@ -356,6 +362,15 @@ const androidScratch = [
   }
     // aur games yahan add karo (same format)
 ];
+
+const amazonGames = [
+  {
+    name: "Going Balls 3D Gyrosphere Game",
+    url: "https://www.amazon.com/Going-Balls-3D-Gyrosphere-Game/dp/B0DQDKG9ZY",
+    icon: "https://m.media-amazon.com/images/I/71d6Y2r2xNL._AC_SY679_.jpg"
+  }
+];
+
 const galaxyStore = [
   {
     name: "Real Mother Life Simulator",
@@ -378,6 +393,7 @@ const galaxyStore = [
 
   renderGames("ios-scratch", iosScratch, true);
   renderGames("android-scratch", androidScratch, false);
+  renderGames("amazon-store", amazonGames, false);
   renderGames("galaxy-store", galaxyStore, false);
   renderGames("ios-updates", iosUpdates, true);
   renderGames("android-updates", androidUpdates, false);
