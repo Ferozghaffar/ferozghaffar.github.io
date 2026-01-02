@@ -4,173 +4,326 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Feroz Ghaffar - Game Developer Portfolio</title>
-
   <style>
-    body {
-      background: linear-gradient(to bottom right, #1e1e2f, #0f0f1c);
-      margin: 0;
-      padding: 0;
-      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
-      background-color: #0f0f1c;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-    }
+   body {
+  background: linear-gradient(to bottom right, #1e1e2f, #0f0f1c);
+  margin: 0;
+  padding: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  background-color: #0f0f1c;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
 
     header {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      padding: 3rem 1rem;
-      text-align: center;
-      border-bottom: 2px solid rgba(0, 255, 255, 0.2);
-      box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
-    }
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark blue gradient */
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
+}
 
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      background: linear-gradient(90deg, #00ffff, #ff00ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: bold;
-    }
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
 
-    .section { padding: 2rem; }
+header .tagline {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+    header p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    .contact {
+      margin-top: 1rem;
+    }
+    .contact a {
+      color: #00f0ff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .section {
+      padding: 2rem;
+    }
+  .section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid #333;
+  color: #00f0ff;
+}
 
     .games-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
     }
-
     .game-card {
-      background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
-      border-radius: 12px;
-      padding: 12px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
+background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
 
-    .game-card:hover { transform: scale(1.03); }
-
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s, box-shadow 0.3s ease;
+  text-align: center;
+}
+.game-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.3);
+}
     .game-card img {
       width: 90px;
       height: 90px;
+      object-fit: cover;
       border-radius: 15px;
     }
-
-    .store-btn img { width: 140px; }
-
-    .app-store-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(0,0,0,0.45);
-      border-radius: 8px;
-      padding: 6px 10px;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
+    .game-card h3 {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+      min-height: 2rem;
     }
+    .store-btn {
+      margin-top: 0.5rem;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .store-btn img {
+      width: 140px;
+      height: auto;
+    }
+    header h1, header p, .contact a span {
+  color: white;
+}
+
+.contact a {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+/* Galaxy Store button tweak (keeps same look on dark bg) */
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.45);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-decoration: none;
+}
+.app-store-button svg { filter: drop-shadow(0 1px 1px rgba(0,0,0,0.4)); }
+
+.app-store-button img {
+  height: 32px;
+}
   </style>
 </head>
-
 <body>
-
 <header>
   <h1>Feroz Ghaffar</h1>
   <p>Unity Game Developer | 1+ Year Experience</p>
+  <p>Working in AdMob, AppLovin Integration & In-App Purchases</p>
+  <div class="contact">
+    <a href="mailto:ferozghaffar1856@gmail.com" target="_blank">
+      <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      Email
+    </a>
+    <a href="https://www.linkedin.com/in/ferozghaffar/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      LinkedIn
+    </a>
+    <a href="https://wa.me/923451486848" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 20px; vertical-align: middle; margin-right: 6px;">
+      WhatsApp
+    </a>
+  </div>
 </header>
 
-<section class="section">
-  <h2>📱 iOS Games (From Scratch)</h2>
-  <div class="games-grid" id="ios-scratch"></div>
-</section>
+  <section class="section">
+   <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">📱 iOS Games (From Scratch)</h2>
+    <div class="games-grid" id="ios-scratch"></div>
+  </section>
 
-<section class="section">
-  <h2>🤖 Android Games (From Scratch)</h2>
-  <div class="games-grid" id="android-scratch"></div>
-</section>
+  <section class="section">
+   <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🤖 Android Games (From Scratch)</h2>
+    <div class="games-grid" id="android-scratch"></div>
 
-<section class="section">
-  <h2>🛒 Amazon Store Games</h2>
-  <div class="games-grid" id="amazon-store"></div>
-</section>
-
-<section class="section">
-  <h2>🛒 Galaxy Store Games</h2>
+  <section class="section">
+   <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🛒 Amazon Store Games</h2>
+    <div class="games-grid" id="amazon-store"></div>
+    
+  </section>
+  <section class="section">
+  <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🛒 Galaxy Store Games</h2>
   <div class="games-grid" id="galaxy-store"></div>
+    
 </section>
+  <section class="section">
+    <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🛠️ Working / Updates on iOS Games</h2>
+    <div class="games-grid" id="ios-updates"></div>
+  </section>
 
-<section class="section">
-  <h2>🛠️ Working / Updates on iOS Games</h2>
-  <div class="games-grid" id="ios-updates"></div>
-</section>
+  <section class="section">
+   <h2 style="color: #00ffff; font-size: 1.8rem; margin-bottom: 1rem; text-shadow: 0 0 8px #00ffff;">🧹 Working / Updates on Android Games</h2>
+    <div class="games-grid" id="android-updates"></div>
+  </section>
 
-<section class="section">
-  <h2>🧹 Working / Updates on Android Games</h2>
-  <div class="games-grid" id="android-updates"></div>
-</section>
-
-<script>
-async function renderGames(containerId, games, isIOS) {
-  const container = document.getElementById(containerId);
-
-  for (let game of games) {
-    const card = document.createElement("div");
-    card.className = "game-card";
-
-    let storeButtonHtml = "";
-
+ <script>
+ async function fetchIconAndName(url, isIOS, gameObj) {
+  try {
     if (isIOS) {
-      storeButtonHtml = `
-        <a class="store-btn" href="${game.url}" target="_blank">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-        </a>`;
-    }
-    else if (game.url.includes("amazon.com")) {
-      storeButtonHtml = `
-        <a class="store-btn" href="${game.url}" target="_blank">
-          <div class="app-store-button">Available on Amazon Appstore</div>
-        </a>`;
-    }
-    else if (game.url.includes("galaxystore.samsung.com")) {
-      storeButtonHtml = `
-        <a class="store-btn" href="${game.url}" target="_blank">
-          <div class="app-store-button">Available on Galaxy Store</div>
-        </a>`;
-    }
-    else {
-      storeButtonHtml = `
-        <a class="store-btn" href="${game.url}" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-        </a>`;
-    }
 
-    card.innerHTML = `
-      <img src="${game.icon}" alt="${game.name}">
-      <h3>${game.name}</h3>
-      ${storeButtonHtml}
-    `;
+     return {
+        icon: gameObj.icon || "",
+        name: gameObj.name || "Untitled Game",
+      };
+  const idMatch = url.match(/id(\d+)/);
+  if (!idMatch) return { icon: "", name: "Untitled Game" };
 
-    container.appendChild(card);
+  const id = idMatch[1];
+
+  try {
+    const res = await fetch(`https://itunes.apple.com/lookup?id=${id}&country=pk`);
+    if (!res.ok) throw new Error("Fetch failed");
+
+    const data = await res.json();
+    const result = data.results?.[0];
+
+    return {
+      icon: result?.artworkUrl512 || result?.artworkUrl100 || "",
+      name: result?.trackName || "Untitled Game",
+    };
+  } catch (e) {
+    console.error("iOS lookup failed", e);
+    return { icon: "", name: "Untitled Game" };
+  }
+}
+ else {
+      // Use provided values directly for Android
+      return {
+        icon: gameObj.icon || "",
+        name: gameObj.name || "Untitled Game",
+      };
+    }
+  } catch (e) {
+    return { icon: "", name: "Untitled Game" };
   }
 }
 
-/* ================= DATA (NOTHING REMOVED) ================= */
+async function renderGames(containerId, games, isIOS) {
+  const container = document.getElementById(containerId);
+  for (let game of games) {
+    const { icon, name } = await fetchIconAndName(game.url, isIOS, game);
+    const card = document.createElement("div");
+    card.className = "game-card";
 
+    // choose badge img based on url
+let badgeImg = '';
+
+if (isIOS) {
+  // iOS App Store badge
+  badgeImg = 'https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg';
+} else if (game.url && game.url.includes('amazon.com')) {
+  badgeImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Download_on_Amazon_Appstore_Badge.svg/320px-Download_on_Amazon_Appstore_Badge.svg.png';
+} else if (game.url && game.url.includes('galaxystore.samsung.com')) {
+  // Samsung / Galaxy Store: use custom text + icon (handled below)
+  badgeImg = '';
+} else {
+  // Default: Google Play Store badge
+  badgeImg = 'https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg';
+}
+    // build innerHTML; Samsung uses a custom button if badgeImg empty
+    let storeButtonHtml = '';
+    if (badgeImg) {
+      storeButtonHtml = `<a class="store-btn" href="${game.url}" target="_blank">
+                          <img src="${badgeImg}" alt="Store" />
+                        </a>`;
+    } else {
+      // Samsung button (same visual weight as others)
+      storeButtonHtml = `<a class="store-btn" href="${game.url}" target="_blank" style="text-decoration:none;">
+                          <div class="app-store-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:8px;fill:white;">
+                              <path d="M21.5 3h-19C1.224 3 1 3.224 1 3.5v17C1 20.776 1.224 21 1.5 21h19c.276 0 .5-.224.5-.5v-17c0-.276-.224-.5-.5-.5zM8 18H4V6h4v12zm12 0h-8V6h8v12z"/>
+                            </svg>
+                            <span style="font-weight:bold;color:white;vertical-align:middle;">Available on Galaxy Store</span>
+                          </div>
+                        </a>`;
+    }
+
+    card.innerHTML = `
+      <img src="${icon}" alt="${name}" />
+      <h3>${name}</h3>
+      ${storeButtonHtml}
+    `;
+    container.appendChild(card);
+  }
+}
+   
+  // Keep your original arrays here
 const iosScratch = [
   {
-    name: "ZappWing",
     url: "https://apps.apple.com/pk/app/zappwing/id6745960441",
+    name: "ZappWing",
     icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f5/67/f4/f567f4b3-9c63-578c-c9be-91d81c4589d5/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+  },
+  {
+    url: "https://apps.apple.com/pk/app/sort-master-puzzle-match-game/id6482292565",
+    name: "Sort Master: Puzzle Match Game",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1e/d3/40/1ed340fc-d6a9-ce4b-c6db-d7f143a4d902/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+  },
+  {
+    url: "https://apps.apple.com/pk/app/bus-rush-mania-city-racer/id6504246159",
+    name: "Bus Rush Mania City Racer",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/83/e6/a5/83e6a50a-553e-7548-fd9f-8ae13ce0323d/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+  },
+  {
+    url: "https://apps.apple.com/pk/app/nuts-bolts-screw-challenges/id6478273667",
+    name: "Nuts Bolts Screw Challenges",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a9/29/df/a929df0c-29e0-6516-646c-6eaaa9bb8591/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
   }
+   // aur games yahan add karo (same format)
 ];
 
 const iosUpdates = [
-  {
-    name: "City Train Driver Game",
+  { 
     url: "https://apps.apple.com/us/app/fps-shooting-commando-strike/id6475386121",
+    name: "FPS Shooting Commando Strike",
     icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3d/01/9d/3d019de3-5a49-afe9-49f6-a2416d1527ea/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+  },
+  {
+    url: "https://apps.apple.com/pk/app/gt-gangster-vice-crime-mafia/id6448944410",
+    name: "GT Gangster Vice Crime Mafia",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/f4/61/47f4615c-f963-d279-570b-08ae909c66dd/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+  },
+  {
+    url: "https://apps.apple.com/us/app/brainzotcrimy3d/id6744527913?uo=4",
+    name: "Brainzotcrimy3D",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ac/59/4d/ac594d9a-1552-a213-d780-d9d32c5d6d3e/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+  },
+  {
+    url: "https://apps.apple.com/us/app/horror-escape-room-adventure/id6743632989",
+    name: "Horror Escape Room Adventure",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/dc/77/efdc7799-0079-8808-80af-66ad8e40cf75/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp"
   }
+   // aur games yahan add karo (same format)
 ];
 
 const androidScratch = [
@@ -178,10 +331,22 @@ const androidScratch = [
     name: "Bird Sorting",
     url: "https://play.google.com/store/apps/details?id=com.gc.bird.sorting.color.game",
     icon: "https://play-lh.googleusercontent.com/OKj-YaqUgY-ezLiI194F5637XEM0r0bE4NogrDaiA1fpI1DAOZuay9JLtKcyhdOwYQ=w240-h480-rw"
+  },
+  {
+    name: "Cooking Chef Kitchen",
+    url: "https://play.google.com/store/apps/details?id=com.gcr.cooking.cheft.set.kitchen.games",
+    icon: "https://play-lh.googleusercontent.com/PLmx1VYMEr3eyz0t5T9GttKHecz3giunG1cqcoRhNYwYsFekn47vjt45dS449lFVzZ2K=w240-h480-rw"
+  },
+  {
+    name: "Dream Restaurant Tycoon 3D",
+    url: "https://play.google.com/store/apps/details?id=com.MarkStudio.DreamRestaurantTycoon3Didle",
+    icon: "https://play-lh.googleusercontent.com/kO4uX238zBjVaMFtak7-sthzVRIBGlQ7TVfW7lokmA23nCRdzy9PZDeZuLVaAScUqHM=w240-h480-rw"
   }
+   // aur games yahan add karo (same format)
 ];
 
-const androidUpdates = [
+ const androidUpdates = [
+   
   {
     name: "City Train Driver Game",
     url: "https://play.google.com/store/apps/details?id=com.gcr.police.car.gangster.chase.game",
@@ -192,6 +357,7 @@ const androidUpdates = [
     url: "https://play.google.com/store/apps/details?id=com.gcr.gangster.theft.crime.simulator.game",
     icon: "https://play-lh.googleusercontent.com/-kgdBQTNhfRpufhhytjd7tHnqSeBJFa_PNXH_BgY4pTYbxLlHQtbnr84NRvVlHTlzKY=w240-h480-rw"
   }
+    // aur games yahan add karo (same format)
 ];
 
 const amazonGames = [
@@ -223,15 +389,19 @@ const galaxyStore = [
     url: "https://galaxystore.samsung.com/detail/com.duperg.football.soccer.game",
     icon: "https://img.samsungapps.com/productNew/000008143226/ENG/IconImage_20250410105042954_NEW_WAP_ICON_512_512.png"
   }
+   // aur games yahan add karo (same format)
 ];
 
-renderGames("ios-scratch", iosScratch, true);
-renderGames("android-scratch", androidScratch, false);
-renderGames("amazon-store", amazonGames, false);
-renderGames("galaxy-store", galaxyStore, false);
-renderGames("ios-updates", iosUpdates, true);
-renderGames("android-updates", androidUpdates, false);
+
+  renderGames("ios-scratch", iosScratch, true);
+  renderGames("android-scratch", androidScratch, false);
+  renderGames("amazon-store", amazonGames, false);
+  renderGames("galaxy-store", galaxyStore, false);
+  renderGames("ios-updates", iosUpdates, true);
+  renderGames("android-updates", androidUpdates, false);
 </script>
 
 </body>
 </html>
+
+
