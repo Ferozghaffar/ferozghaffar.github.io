@@ -241,9 +241,11 @@ let badgeImg = '';
 if (isIOS) {
   // iOS App Store badge
   badgeImg = 'https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg';
-} else if (game.url && game.url.includes('amazon.com')) {
-  badgeImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Download_on_Amazon_Appstore_Badge.svg/320px-Download_on_Amazon_Appstore_Badge.svg.png';
-} else if (game.url && game.url.includes('galaxystore.samsung.com')) {
+} } else if (game.url && game.url.includes('amazon.com')) {
+    // Amazon Store: use custom text + icon (handled below)
+  badgeImg = '';
+}
+ else if (game.url && game.url.includes('galaxystore.samsung.com')) {
   // Samsung / Galaxy Store: use custom text + icon (handled below)
   badgeImg = '';
 } else {
