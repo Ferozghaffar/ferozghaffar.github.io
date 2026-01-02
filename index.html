@@ -23,7 +23,7 @@
   box-shadow: 0 4px 20px rgba(0, 255, 255, 0.05);
 }
 
-header h1 {
+/* header h1 {
   font-size: 3rem;
   margin: 0;
   background: linear-gradient(90deg, #00ffff, #ff00ff);
@@ -31,8 +31,23 @@ header h1 {
   -webkit-text-fill-color: transparent;
   font-weight: bold;
   letter-spacing: 1px;
+} */
+
+    header h1 {
+  font-size: 3.2rem;
+  margin: 0;
+  color: #00ffff; /* base bright color */
+  font-weight: 800;
+  letter-spacing: 1.5px;
+
+  /* SHINE / GLOW */
+  text-shadow:
+    0 0 8px rgba(0, 255, 255, 0.6),
+    0 0 16px rgba(0, 255, 255, 0.5),
+    0 0 32px rgba(0, 200, 255, 0.4);
 }
 
+    
 header .tagline {
   font-size: 1.1rem;
   color: #cccccc;
@@ -134,6 +149,17 @@ background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 .app-store-button img {
   height: 32px;
 }
+    
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 8px rgba(0,255,255,0.4); }
+  50% { text-shadow: 0 0 20px rgba(0,255,255,0.8); }
+  100% { text-shadow: 0 0 8px rgba(0,255,255,0.4); }
+}
+
+header h1 {
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+    
   </style>
 </head>
 <body>
