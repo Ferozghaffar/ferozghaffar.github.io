@@ -263,15 +263,33 @@ if (isIOS) {
     } else {
 
   // AMAZON STORE
-  if (game.url.includes('amazon.com')) {
-    storeButtonHtml = `
-      <a class="store-btn" href="${game.url}" target="_blank" style="text-decoration:none;">
-        <div class="app-store-button">
-          <span style="font-weight:bold;color:white;">
-            Available on Amazon Store
-          </span>
-        </div>
-      </a>`;
+if (game.url.includes('amazon.com')) {
+  storeButtonHtml = `
+    <a class="store-btn" href="${game.url}" target="_blank" style="text-decoration:none;">
+      <div class="app-store-button">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="20" height="20"
+             viewBox="0 0 24 24"
+             style="margin-right:8px;fill:white;">
+          <path d="M15.93 17.09c-2.62 1.7-6.43 2.6-9.6 2.6
+                   -4.53 0-8.6-1.67-11.69-4.46
+                   -.24-.22-.02-.52.27-.34
+                   3.33 1.94 7.46 3.11 11.72 3.11
+                   2.82 0 5.92-.59 8.77-1.8
+                   .43-.18.8.28.36.59z"/>
+          <path d="M17.03 15.82c-.33-.42-2.17-.2-3 .01
+                   -.25.06-.29-.19-.06-.35
+                   1.49-1.05 3.93-.75 4.21-.4
+                   .28.36-.07 2.81-1.45 3.97
+                   -.21.18-.41.08-.32-.15
+                   .3-.77.97-2.49.62-3.08z"/>
+        </svg>
+
+        <span style="font-weight:bold;color:white;">
+          Available on Amazon Store
+        </span>
+      </div>
+    </a>`;
 
   // GALAXY STORE
   } else {
