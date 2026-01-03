@@ -151,7 +151,7 @@ header h1 {
 <header>
   <h1>Feroz Ghaffar</h1>
   <p>Unity Game Developer | 1+ Year Experience</p>
-  <p>Working in AdMob, AppLovin Integration & In-App Purchases</p>
+  <!-- <p>Working in AdMob, AppLovin Integration & In-App Purchases</p> -->
   <div class="contact">
     <a href="mailto:ferozghaffar1856@gmail.com" target="_blank">
       <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail" style="width: 20px; vertical-align: middle; margin-right: 6px;">
@@ -170,9 +170,9 @@ header h1 {
   
 <section class="section" style="text-align:center; max-width:900px; margin:auto;">
   <p style="color:#ccc; font-size:1.05rem;">
-    I am a Unity game developer focused on building engaging mobile games.
-    I have experience publishing games across Google Play, Apple App Store,
-    Amazon Appstore, and Samsung Galaxy Store.
+  I am a Unity game developer focused on building engaging mobile games.
+  I have experience in optimization, monetization, and publishing games
+  across Google Play, Apple App Store and Amazon Appstore.
   </p>
 </section>
 
@@ -373,9 +373,9 @@ const iosUpdates = [
     icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/bb/00/bc/bb00bccc-4ed7-a20f-a9c3-fabbdd20068c/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/400x400ia-75.webp"
   },
   {
-    url: "https://apps.apple.com/pk/app/gt-gangster-vice-crime-mafia/id6448944410",
-    name: "GT Gangster Vice Crime Mafia",
-    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/47/f4/61/47f4615c-f963-d279-570b-08ae909c66dd/AppIcon-1x_U007emarketing-0-8-0-85-220-0.png/230x0w.webp"
+    url: "https://apps.apple.com/pk/app/us-army-vehicle-transport-game/id1658309122",
+    name: "US Army Vehicle Transport Game",
+    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bf/38/40/bf3840e5-dbd0-ab70-3b25-59e5264f4099/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/400x400ia-75.webp"
   },
   {
     url: "https://apps.apple.com/us/app/brainzotcrimy3d/id6744527913?uo=4",
@@ -429,33 +429,48 @@ const amazonGames = [
     name: "Dreamy Room Makeover - Home Decor Designer",
     url: "https://www.amazon.com/Dreamy-Room-Makeover-Decor-Designer/dp/B0G2XBMH1B",
     icon: "https://m.media-amazon.com/images/I/81lSz9a4BXL.png"
+  },
+  {
+    name: "Offroad 4x4 Jeep Driving Simulator Game",
+    url: "https://www.amazon.com/Offroad-Jeep-Driving-Simulator-Game/dp/B0FSNDWJK6",
+    icon: "https://m.media-amazon.com/images/I/81vEwVMvQXL.png"
+  },
+  {
+    name: "BMX Cycle Extreme: Stunt Riding Challenge",
+    url: "https://www.amazon.com/BMX-Cycle-Extreme-Riding-Challenge/dp/B0FSSBQ5TS",
+    icon: "https://m.media-amazon.com/images/I/816cdjLvMnL.png"
+  },
+  {
+    name: "Wood Nuts & Bolts: Screw Puzzle Challenge",
+    url: "https://www.amazon.com/Wood-Nuts-Bolts-Puzzle-Challenge/dp/B0FSDP5VCM",
+    icon: "https://m.media-amazon.com/images/I/81JlYYzsXEL.png"
   }
 ];
 
-const galaxyStore = [
-  // {
-  //   name: "Real Mother Life Simulator",
-  //   url: "https://appgallery.huawei.com/app/C115137085",
-  //   icon: "https://appimg-dra.dbankcdn.com/application/icon144/1082/63b1177df0494f5184667acdad633e71.png"
-  // },
-  // {
-  //   name: "Bird Sort Fun Puzzle Game",
-  //   url: "https://galaxystore.samsung.com/detail/com.hg.rhu.birdgames.birdsortsimulator.game",
-  //   icon: "https://img.samsungapps.com/productNew/000008398703/ENG/IconImage_20250903072521684_NEW_WAP_ICON_512_512.png"
-  // },
-  // {
-  //   name: "Dream League football soccer star 2025",
-  //   url: "https://galaxystore.samsung.com/detail/com.duperg.football.soccer.game",
-  //   icon: "https://img.samsungapps.com/productNew/000008143226/ENG/IconImage_20250410105042954_NEW_WAP_ICON_512_512.png"
-  // }
-   // aur games yahan add karo (same format)
-];
+// const galaxyStore = [
+//   {
+//     name: "Real Mother Life Simulator",
+//     url: "https://appgallery.huawei.com/app/C115137085",
+//     icon: "https://appimg-dra.dbankcdn.com/application/icon144/1082/63b1177df0494f5184667acdad633e71.png"
+//   },
+//   {
+//     name: "Bird Sort Fun Puzzle Game",
+//     url: "https://galaxystore.samsung.com/detail/com.hg.rhu.birdgames.birdsortsimulator.game",
+//     icon: "https://img.samsungapps.com/productNew/000008398703/ENG/IconImage_20250903072521684_NEW_WAP_ICON_512_512.png"
+//   },
+//   {
+//     name: "Dream League football soccer star 2025",
+//     url: "https://galaxystore.samsung.com/detail/com.duperg.football.soccer.game",
+//     icon: "https://img.samsungapps.com/productNew/000008143226/ENG/IconImage_20250410105042954_NEW_WAP_ICON_512_512.png"
+//   }
+//    // aur games yahan add karo (same format)
+// ];
 
 
   renderGames("ios-scratch", iosScratch, true);
   renderGames("android-scratch", androidScratch, false);
   renderGames("amazon-store", amazonGames, false);
-  renderGames("galaxy-store", galaxyStore, false);
+  //renderGames("galaxy-store", galaxyStore, false);
   renderGames("ios-updates", iosUpdates, true);
   renderGames("android-updates", androidUpdates, false);
 </script>
